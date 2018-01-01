@@ -83,10 +83,10 @@ year14 = [[14,1],[14,2],[14,3],[14,4]]
 year15 = [[15,0],[15,1]]
 
 #Grid positions for 2018
-number0 = [[0,0],[0,1],[0,2],[0,3],[0,4]]
-number1 = [[1,3]]
-number2 = [[2,2]]
-number3 = [[3,1]]
+number0 = [[0,0],[0,1],[0,2],[0,3]]
+number1 = [[1,4]]
+number2 = [[2,2],[2,3]]
+number3 = [[3,2]]
 number4 = [[4,0],[4,1],[4,2],[4,3],[4,4]]
 #3
 number6 = [[6,0],[6,1],[6,2],[6,3],[6,4]]
@@ -287,11 +287,11 @@ def year(lx,ly,y,char):
         window.addstr((lx+year15[x][0]), (ly+year15[x][1]), char, curses.color_pair(y))
 
 def number(lx,ly,y,char):
-    for x in range(0,5,1):
+    for x in range(0,4,1):
         window.addstr((lx+number0[x][0]), (ly+number0[x][1]), char, curses.color_pair(y))
     for x in range(0,1,1):
         window.addstr((lx+number1[x][0]), (ly+number1[x][1]), char, curses.color_pair(y))
-    for x in range(0,1,1):
+    for x in range(0,2,1):
         window.addstr((lx+number2[x][0]), (ly+number2[x][1]), char, curses.color_pair(y))
     for x in range(0,1,1):
         window.addstr((lx+number3[x][0]), (ly+number3[x][1]), char, curses.color_pair(y))
